@@ -1,0 +1,41 @@
+.ripple 
+	overflow: hidden
+	position: relative
+
+	&::after 
+		background: currentcolor
+		content: ''
+		height: 100%
+		opacity: 0
+		position: absolute
+		right: 0
+		top: 0
+		transition: opacity 0.3s
+		width: 100%
+
+	&:hover
+		&::after
+			opacity: 0.06
+
+	&:focus
+		&::after
+			opacity: 0.12
+
+	&:active
+		&::after
+			opacity: 0.24
+
+.active 
+	overflow: hidden
+	position: relative
+
+	&::after
+		background: currentcolor
+		content: ''
+		height: 100%
+		opacity: 0.08
+		position: absolute
+		right: 0
+		top: 0
+		transition: opacity 0.3s
+		width: 100%
