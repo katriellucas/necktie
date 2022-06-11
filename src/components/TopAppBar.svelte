@@ -1,7 +1,5 @@
 <script lang="ts">
 	import AppLogo from './AppLogo.svelte'
-	import Sprite from './Sprite.svelte'
-	// import HashButton from './buttons/HashButton.svelte'
 	import Button from './Button.svelte'
 
 	let pin : string
@@ -27,13 +25,14 @@
 	<div>
 		<AppLogo/>
 	</div>
-	<div class="nav">
-		<!-- <HashButton label="Home" url="#home"/>
-		<HashButton label="About me" url="#about"/>
-		<HashButton label="Projects" url="#projects"/>
-		<HashButton label="Contact" url="#contact"/> -->
-		<Button label="Download CV" url="/cv_katriel.pdf"/>
-	</div>
+	<nav>
+		<Button type="text" label="Home" url="#home"/>
+		<!-- <Button type="text" label="What I do" url="#what-i-do"/>
+		<Button type="text" label="About me" url="#about-me"/>
+		<Button type="text" label="Projects" url="#projects"/>
+		<Button type="text" label="Contact" url="#contact"/> -->
+		<Button type="filled" label="Resume" url="/cv_katriel.pdf" target="_blank"/>
+	</nav>
 </header>
 
 <style lang="sass">
@@ -59,10 +58,7 @@
 	@media (min-width: 1080px)
 		padding: 0 64px
 
-.title
-	margin-left: 16px
-
-.nav
+nav
 	display: flex
 
 // - mods
